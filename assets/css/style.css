@@ -1,0 +1,771 @@
+/*
+ * =================================================================
+ * MASTER STYLESHEET SMKS PASUNDAN SUBANG
+ * =================================================================
+ * Developer: Suharta (SMKS Pasundan Subang)
+ * Generated & Refined by: Gemini
+ * Theme Color: Main (#6e5bd8 - Ungu), Second (#1fd684 - Hijau)
+ * =================================================================
+ */
+
+/* 1. ROOT VARIABLES & GLOBAL SETTINGS */
+:root {
+    --main-color: #6e5bd8;
+    --second-color: #1fd684;
+    --bg-color: #f8f9fa99;
+    --main-color-rgb: 110, 91, 216; /* Tambahan untuk opacity CSS */
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+}
+
+/* 2. UTILITY & TYPOGRAPHY */
+.txt-dark { color: #555; }
+.txt-justify { text-align: justify; }
+
+.rd-10 { border-radius: 10px; }
+.rd-15 { border-radius: 15px; }
+.rd-20 { border-radius: 20px; }
+.rd-25 { border-radius: 25px; }
+.rd-30 { border-radius: 30px; }
+
+.ttg-judul {
+    color: var(--second-color);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.txt-judul {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.teg {
+    color: var(--main-color) !important;
+}
+
+.txt-main {
+    font-weight: 900;
+    color: var(--main-color);
+}
+
+/* 3. BACKGROUNDS & BUTTONS */
+.bg-main {
+    background-color: var(--main-color) !important;
+    color: #fff;
+}
+
+.bg-second {
+    background-color: var(--second-color) !important;
+    color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btn-main {
+    background-color: var(--main-color) !important;
+    color: #fff !important;
+}
+
+.btn-main:hover {
+    outline: 3px solid var(--main-color);
+    outline-offset: 3px;
+    color: #ddd;
+}
+
+.btn-second {
+    background-color: var(--second-color) !important;
+    color: #fff;
+}
+
+.btn-second:hover {
+    outline: 3px solid var(--second-color);
+    outline-offset: 3px;
+    color: #ddd;
+}
+
+.btn-lig {
+    background-color: #ffffff;
+    color: #555;
+}
+
+.btn-lig:hover {
+    background-color: #efefef;
+    outline: 3px solid #efefef;
+    outline-offset: 3px;
+    color: #666;
+}
+
+/* 4. NAVBAR & OFFCANVAS */
+.offcanvas-start {
+    max-width: 80%;
+    height: 100vh;
+}
+
+.bg-navbar {
+    background-color: #f8f9fa50 !important;
+    backdrop-filter: blur(10px);
+}
+
+.dropdown-menu {
+    border: none;
+    padding-left: 10px;
+    padding-right: 15px;
+    box-shadow: 0px 10px 10px 0px #00000020;
+}
+
+.dropdown-menu li a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* 4. NAVBAR & OFFCANVAS (Bagian Penanda Aktif) */
+
+/* Gaya default untuk semua link di Navbar */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 3px solid transparent; /* Garis transparan default */
+    padding-bottom: 8px; /* Ruang untuk garis bawah */
+}
+
+/* 🏆 TAUTAN UTAMA AKTIF (Border Bawah Tebal - Main Color) */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--main-color) !important; /* Teks berwarna Ungu saat aktif/hover */
+    border-bottom: 3px solid var(--main-color); /* Border Ungu Tebal */
+}
+
+/* Penyesuaian agar Offcanvas tetap memiliki padding yang baik */
+.offcanvas-body .nav-item {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 🏆 ITEM DROPDOWN AKTIF */
+.dropdown-menu .dropdown-item.active, 
+.dropdown-menu .dropdown-item:active {
+    background-color: rgba(var(--main-color-rgb), 0.1); /* Latar belakang Ungu Transparan */
+    color: var(--main-color) !important; /* Teks Ungu */
+    font-weight: 600;
+    border-radius: 5px; /* Sedikit lengkungan pada item dropdown */
+}
+
+/* Fix untuk offcanvas di mode mobile agar link aktif tetap terlihat rapi */
+.offcanvas-body .nav-link.active {
+    /* Hapus border bawah di menu offcanvas (mobile) karena terlalu tebal */
+    border-bottom: none !important;
+    background-color: rgba(var(--main-color-rgb), 0.1); /* Gunakan latar belakang Ungu Transparan sebagai gantinya */
+    border-radius: 5px;
+    color: var(--main-color) !important;
+}
+
+/* Pastikan logo di navbar brand selalu terlihat */
+.navbar-brand img {
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+/* 5. HERO SECTIONS */
+.hero-title { font-size: 48px; }
+
+.hero {
+    min-height: 100vh;
+    background: #F8F9FA80;
+    background-image: linear-gradient(#6e5bd820 1px, transparent 1px),
+                      linear-gradient(to right, #6e5bd820 1px, #f8f9fa20 1px);
+    background-size: 20px 20px;
+    padding-top: 12vh;
+}
+
+.hero-fl {
+    min-height: 88vh;
+    background: linear-gradient(192deg, rgba(248, 249, 250, 0) 0%,
+                #f8f9fa 88%, #1fd684 0%);
+}
+
+.bg-img-hero {
+    background-image: url("../img/hero/bg4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.img-hero-2 {
+    background-image: url("../img/hero/bg-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+}
+
+.hero-2 {
+    min-height: 50vh;
+    background: #F8F9FA90;
+    background-image: linear-gradient(#6e5bd820 1px, transparent 1px),
+                      linear-gradient(to right, #6e5bd820 1px, #f8f9fa20 1px);
+    background-size: 20px 20px;
+}
+
+.hero-2-fl {
+    height: 50vh;
+    background: linear-gradient(192deg, rgba(248, 249, 250, 0) 0%,
+                #f8f9fa 80%, #1fd684 0%);
+}
+
+.hero .pasundan {
+    font-weight: 900;
+    color: #444;
+}
+
+/* 6. HERO ANIMATION & UTILITIES */
+@keyframes naikTurun {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.gambar-container { position: relative; }
+.gambar-patok { width: 100%; height: auto; }
+
+.bg-glases {
+    background-color: #00000010;
+    border: solid 0.2px #fff;
+    backdrop-filter: blur(5px);
+}
+
+.posisi1 {
+    position: absolute;
+    top: 80%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px 0px #ffffff00;
+    animation: naikTurun 3s ease-in-out infinite;
+}
+
+.posisi2 {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px 0px #ffffff00;
+    animation: naikTurun 2.5s ease-in-out infinite;
+}
+
+/* 7. DUA GAMBAR SECTION */
+.dua-gambar { min-height: 500px; }
+.img-dua { transition: transform 0.5s ease; }
+.img-dua:hover { transform: scale(1.1) translateY(-10px); }
+
+.img-lama {
+    position: absolute; top: 20px; left: 20px; width: 65%; z-index: 1; opacity: 0.8;
+    filter: blur(10px); transition: transform 0.5s ease; border: solid 10px #F8F9FA;
+}
+
+.img-lama:hover {
+    filter: blur(0px); z-index: 3; opacity: 1; border: solid 10px #F8F9FA; border-radius: 15px !important;
+}
+
+.img-baru {
+    position: absolute; bottom: 0; right: 0; width: 70%; z-index: 2;
+    border: solid 10px #F8F9FA; transition: transform 0.5s ease;
+}
+
+.img-baru:hover { filter: blur(0px); }
+
+.img-lama-r {
+    position: absolute; bottom: 0; right: 0; width: 65%; z-index: 1;
+    opacity: 0.8; filter: blur(10px); transition: transform 0.5s ease; border: solid 10px #ffffff;
+}
+
+.img-lama-r:hover {
+    filter: blur(0px); z-index: 3; opacity: 1; border: solid 10px #ffffff; border-radius: 15px !important;
+    box-shadow: 15px 15px 15px 0px #00000030;
+}
+
+.img-baru-r {
+    position: absolute; top: 0px; left: 20px; width: 70%; z-index: 2;
+    border: solid 10px #ffffff; transition: transform 0.5s ease; box-shadow: 10px 10px 15px 0px #00000050;
+}
+
+.img-baru-r:hover {
+    filter: blur(0px); box-shadow: 15px 15px 15px 0px #00000030;
+}
+
+/* 8. LOGO CAROUSEL */
+.logo-carousel {
+    overflow: hidden; position: relative; width: 100%; background: #f8f9fa; padding: 10px 0;
+}
+
+.logo-carousel::before, .logo-carousel::after {
+    content: ""; position: absolute; top: 0; width: 120px; height: 100%; z-index: 2; pointer-events: none;
+}
+
+.logo-carousel::before { left: 0; background: linear-gradient(to right, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%); }
+.logo-carousel::after { right: 0; background: linear-gradient(to left, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%); }
+
+.partner-logo {
+    display: flex; align-items: center; justify-content: flex-start; gap: 60px;
+    animation: scrollLeft 25s linear infinite; width: max-content;
+}
+
+.lgo-mitra {
+    height: 60px; width: auto; object-fit: contain; opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.lgo-mitra:hover { transform: scale(1.1); opacity: 1; }
+
+@keyframes scrollLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.logo-carousel:hover .partner-logo { animation-play-state: paused; }
+
+/* 9. TIMELINE */
+.timeline-wrapper { position: relative; max-width: 900px; margin: 0 auto; }
+
+.timeline-wrapper::before {
+    content: ''; position: absolute; left: 20px; top: 10px; bottom: 0; width: 4px; background: var(--main-color);
+}
+
+.timeline-item { position: relative; margin-bottom: 3rem; padding-left: 60px; }
+
+.timeline-icon {
+    position: absolute; left: 0; top: 0; width: 44px; height: 44px; background: var(--main-color);
+    color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; border: 4px solid var(--main-color); transform: translateX(-50%);
+    left: 22px;
+}
+
+.timeline-content .year {
+    font-weight: 700; color: var(--main-color); font-size: 1.5rem; margin-bottom: 0.25rem;
+}
+
+.timeline-content .title {
+    font-weight: 600; font-size: 1.2rem; color: #333;
+}
+
+/* 10. PEGAWAI: FAKTA MENARIK (STATS) - UPGRADE */
+.facts-section {
+    background: linear-gradient(45deg, var(--main-color) 0%, #4a3e8f 100%);
+    color: white; padding: 80px 0; position: relative; overflow: hidden;
+}
+
+.facts-section::before, .facts-section::after {
+    content: ''; position: absolute; border-radius: 50%; z-index: 0;
+}
+
+.facts-section::before {
+    top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(255, 255, 255, 0.05);
+    animation: rotate 20s linear infinite;
+}
+
+.facts-section::after {
+    bottom: -50px; right: -50px; width: 250px; height: 250px; background: rgba(255, 255, 255, 0.08);
+    animation: rotate-reverse 25s linear infinite;
+}
+
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes rotate-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+
+.facts-section .stats-item-upgrade {
+    background-color: rgba(255, 255, 255, 0.1); padding: 30px 20px; border-radius: 15px;
+    transition: all 0.3s ease; text-align: center; backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 180px; position: relative; z-index: 1; /* Di atas gelembung */
+}
+
+.facts-section .stats-item-upgrade:hover {
+    transform: translateY(-8px) scale(1.02); background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.facts-section .stats-item-upgrade .icon-upgrade { font-size: 3.5rem; color: white; margin-bottom: 15px; display: block; }
+.facts-section .stats-item-upgrade .number-upgrade { font-size: 2.8rem; font-weight: 700; margin-bottom: 5px; line-height: 1.2; }
+.facts-section .stats-item-upgrade .text-upgrade { font-size: 1.1rem; opacity: 0.9; }
+
+/* 11. PEGAWAI: PROFILE CARD - UPGRADE */
+.profile-card-upgrade {
+    border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;
+    background-color: #fff; height: 100%; display: flex; flex-direction: column;
+}
+
+.profile-card-upgrade:hover { transform: translateY(-10px); box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15); }
+
+.profile-card-upgrade .card-img-top {
+    height: 180px; object-fit: cover; filter: brightness(0.7); transition: filter 0.3s ease;
+}
+
+.profile-card-upgrade:hover .card-img-top { filter: brightness(0.8); }
+
+.profile-card-upgrade .card-body {
+    padding: 20px; text-align: center; flex-grow: 1; position: relative; padding-top: 80px;
+}
+
+.profile-card-upgrade .profile-image-overlay-upgrade {
+    position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 120px;
+    height: 120px; border-radius: 50%; background-color: #fff; padding: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); z-index: 10; transition: transform 0.3s ease;
+}
+
+.profile-card-upgrade:hover .profile-image-overlay-upgrade { transform: translateX(-50%) translateY(-5px); }
+
+.profile-card-upgrade .profile-image-overlay-upgrade img {
+    width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
+    border: 2px solid var(--main-color);
+}
+
+.profile-card-upgrade .card-title { font-size: 1.35rem; font-weight: 700; margin-bottom: 5px; color: #333; }
+.profile-card-upgrade .card-subtitle { font-size: 1rem; color: var(--main-color); margin-bottom: 15px; font-weight: 600; }
+
+.profile-card-upgrade .social-icons-upgrade a {
+    color: #6c757d; font-size: 1.3rem; margin: 0 8px; transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.profile-card-upgrade .social-icons-upgrade a:hover { color: var(--main-color); transform: translateY(-3px); }
+
+/* 12. PEGAWAI: TAB NAVIGASI */
+.nav-tabs .nav-link {
+    color: #6c757d; border: none; border-bottom: 3px solid transparent; transition: all 0.3s ease;
+    font-weight: 600; padding: 15px 20px; margin: 0 5px;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--main-color); border-color: rgba(var(--main-color-rgb), 0.3);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--main-color); border-color: var(--main-color); background-color: transparent;
+}
+.nav-tabs { border-bottom: 1px solid #dee2e6; }
+
+/* Custom CSS untuk FINAL FOOTER DESIGN: DARK MODE DENGAN TEKSTUR */
+.bg-dark-textured {
+    background-color: #212529 !important; 
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    
+    /* Menambahkan pola tekstur dari main-color */
+    background-image: 
+        repeating-linear-gradient(45deg, rgba(110, 91, 216, 0.05) 0, rgba(110, 91, 216, 0.05) 1px, transparent 1px, transparent 50%);
+    background-size: 15px 15px; /* Ukuran pola yang halus */
+
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2); /* Shadow di bagian atas footer */
+}
+
+/* Memastikan semua elemen teks utama adalah Putih */
+.bg-dark-textured h5,
+.bg-dark-textured p,
+.bg-dark-textured .bi {
+    color: #fff !important; 
+    opacity: 0.95;
+}
+
+/* TAUTAN FOOTER: Putih pudar saat normal, Hijau Terang saat hover */
+.footer-link-final {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    /* Memberikan latar belakang solid saat disorot */
+}
+
+.footer-link-final:hover {
+    color: var(--second-color) !important;
+    text-decoration: underline !important;
+}
+
+/* GARIS PEMISAH VERTIKAL (Hanya di layar besar) */
+/* Kita akan menggunakan properti border pada kolom */
+@media (min-width: 768px) {
+    .footer-col-separator {
+        border-right: 1px solid rgba(255, 255, 255, 0.1); /* Garis putih transparan tipis */
+        padding-right: 15px; /* Ruang agar garis tidak terlalu mepet */
+    }
+}
+/* Jangan lupa hapus border pada kolom terakhir */
+@media (min-width: 768px) {
+    .bg-dark-textured .row > .col-md-3:last-child {
+        border-right: none;
+    }
+}
+
+/* Teks Copyright */
+.bg-dark-textured .text-copyright {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Ikon Media Sosial */
+.bg-dark-textured .fs-4 i {
+    color: #fff !important;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.bg-dark-textured .fs-4 i:hover {
+    color: var(--second-color) !important;
+    transform: scale(1.1);
+}
+
+/* Styling untuk Static Logo Grid di halaman Mitra Industri (FINAL UPGRADE) */
+.logo-grid {
+    padding: 30px 0;
+}
+
+.logo-grid .logo-item {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0; /* Border lebih terang */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* MENENTUKAN UKURAN KOTAK LOGO AGAR SERAGAM */
+    min-height: 100px; 
+    max-height: 100px; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-grid .logo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(var(--main-color-rgb), 0.15); /* Shadow lebih menonjol */
+}
+
+.logo-grid .logo-img {
+    /* MENENTUKAN UKURAN LOGO DI DALAM KOTAK */
+    max-height: 60px; /* Logo memiliki tinggi maksimal 60px */
+    width: auto;
+    object-fit: contain;
+    opacity: 0.7; /* Lebih pudar saat normal */
+    filter: grayscale(100%); /* Full grayscale saat normal */
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-grid .logo-item:hover .logo-img {
+    filter: grayscale(0%); /* Full color saat hover */
+    opacity: 1; /* Penuh warna */
+}
+
+/* Styling untuk kategori di atas grid */
+.mitra-category-title {
+    background-color: var(--second-color);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+/* GARIS PEMISAH JURUSAN (ELEGANT HIGHLIGHT) */
+.category-highlight {
+    border-bottom: 3px solid var(--main-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* =======================================
+   CONTACT V3 STYLING (FINAL FIXES)
+   ======================================= */
+
+/* 1. Hero Split Fokus */
+.contact-hero-split {
+    padding-top: 80px; /* Tambah padding atas untuk ruang */
+    padding-bottom: 50px;
+    background-color: var(--bg-color); /* Latar belakang terang/default */
+    color: #555;
+}
+
+/* 2. Kartu Kontak Utama (Left Focus) */
+.contact-highlight-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    /* --- HAPUS TRANSFORM AGAR SEJAJAR --- */
+    /* transform: translateY(-30px); */ 
+}
+.contact-highlight-card h4 {
+    color: var(--main-color); /* Warna Ungu */
+    font-weight: 700;
+}
+.contact-highlight-card p {
+    color: #666;
+}
+
+/* Tombol WhatsApp Besar (Tetap Kuat) */
+.btn-whatsapp-large {
+    background-color: var(--second-color); /* Menggunakan second-color */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: none; /* Pastikan tidak ada border default */
+}
+.btn-whatsapp-large:hover {
+    background-color: #128c7e; /* Darker green */
+    transform: translateY(-2px);
+}
+
+/* 3. Formulir Fokus Kanan */
+.contact-quick-form {
+    background-color: var(--main-color); /* Latar belakang Ungu */
+    padding: 30px;
+    border-radius: 15px;
+    height: 100%;
+    color: #fff;
+}
+.contact-quick-form .form-control,
+.contact-quick-form .form-select {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: #333; /* Warna teks input */
+}
+.contact-quick-form .form-select {
+    appearance: none; /* Hapus panah default di beberapa browser */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+.contact-quick-form .form-label {
+    color: #fff; /* Label Putih */
+    font-weight: 600;
+}
+
+/* 4. Peta Penuh & CTA Bawah (LATAR BELAKANG PUTIH) */
+.map-full-section {
+    background-color: #ffffff !important; /* Latar belakang PUTIH */
+    padding-top: 50px; /* Tambah padding atas */
+    padding-bottom: 50px;
+}
+
+.map-full-embed {
+    width: 100%;
+    height: 450px;
+    filter: brightness(0.9) grayscale(70%); /* Sedikit desaturated, tidak terlalu gelap */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Tambah shadow pada peta */
+}
+
+.map-full-embed:hover {
+    filter: brightness(1.0) grayscale(0%);
+}
+
+/* Tombol Kirim Sekarang di Formulir */
+.contact-quick-form .btn-second {
+    background-color: var(--second-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px 30px;
+    border: none;
+    transition: all 0.3s ease;
+}
+.contact-quick-form .btn-second:hover {
+    background-color: #128c7e;
+    transform: translateY(-2px);
+}
+
+/* Styling Tambahan untuk Efek Interaktif pada Card */
+
+/* Efek umum untuk semua Card yang ingin dianimasikan */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* 🏆 Efek Lift-up dan Shadow saat Hover */
+.card:hover {
+    /* Mengangkat kartu sedikit ke atas */
+    transform: translateY(-5px); 
+    /* Memperbesar bayangan untuk efek 3D */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important; 
+}
+
+/* Pastikan efek ini diterapkan pada kartu di bagian Program dan Jurusan */
+#program .card,
+#jurusan .card {
+    /* Menambahkan kembali box-shadow dasar agar efek lift-up terlihat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important; 
+}
+
+/* Tambahkan atau pastikan definisi ini ada di style.css Anda */
+
+@media (min-width: 992px) {
+    .sticky-profile {
+        /* Mengaktifkan fitur sticky */
+        position: -webkit-sticky;
+        position: sticky;
+        /* Jarak dari atas (100px agar tidak tertutup oleh navbar fixed-top) */
+        top: 100px; 
+    }
+}
+
+
+/* 13. MEDIA QUERIES */
+@media (max-width: 991.98px) {
+    .hero-title { font-size: 36px; }
+}
+
+@media (max-width: 767.98px) {
+    .hero .kiri { text-align: center; }
+    .hero h1 { font-size: 30px; font-weight: 500; }
+    .hero .pasundan { font-size: 40px; font-weight: 900; color: #444; }
+    .hero-fl {
+        height: 100%;
+        background: linear-gradient(187deg, rgba(248, 249, 250, 0) 0%,
+                    #f8f9fa 66%, #1fd684 0%);
+    }
+    .hp-hidden { display: none !important; }
+    .dua-gambar { min-height: 300px; width: 100vw; padding: 70px; }
+}
+
+@media (max-width: 575.98px) {
+    /* .hero-title { font-size: 20px; line-height: 1.3; } */
+    .btn-sc-hero { background-color: var(--main-color) !important; color: #fff; }
+    .btn-sc-hero:hover { outline: 3px solid var(--main-color); outline-offset: 3px; color: #ddd; }
+    .hero .kanan { display: none !important; }
+}
+
+/*
+ * =================================================================
+ * COPYRIGHT INFORMATION
+ * =================================================================
+ * Dikerjakan oleh: Suharta
+ * Lembaga: SMKS Pasundan Subang
+ * =================================================================
+ */

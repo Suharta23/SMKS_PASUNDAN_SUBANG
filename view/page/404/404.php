@@ -21,11 +21,11 @@
                     </p>
 
                     <div data-aos="fade-up" data-aos-delay="400">
-                        <a href="/beranda" class="btn btn-main btn-lg me-3">
+                        <a href="/beranda" class="btn btn-main btn-lg m-3">
                            <i class="bi bi-house-up text-light"></i>  Kembali ke Beranda
                         </a>
                         
-                        <a href="/kontak" class="btn btn-second btn-lg ">
+                        <a href="/kontak" class="btn btn-second btn-lg m-3">
                             <i class="bi bi-telephone-outbound text-light"></i> Hubungi Kami
                         </a>
                     </div>

@@ -13,9 +13,14 @@
             }
 
             if (file_exists($tpl)) {
-                include "view/layout/navbar.php";
-                include $tpl;
-                include "view/layout/footer.php";
+                if($page!="tour"){
+                    include "view/layout/navbar.php";
+                    include $tpl;
+                    include "view/layout/footer.php";
+                }else{
+                     include $tpl;
+                }
+               
             } else {
                 include __DIR__ . "/page/404/404.php";
             }

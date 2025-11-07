@@ -181,7 +181,7 @@ function isActiveMenu($menuItem, $page, $file) {
                         <?php endforeach; ?>
                     </ul>
 
-                    <a href="virtual_tour.html" class="btn btn-main ms-3 my-2" target="_blank">Tour</a>
+                    <a href="tour" class="btn btn-main ms-3 my-2" target="_blank">Tour</a>
                 </div>
             </div>
         </div>

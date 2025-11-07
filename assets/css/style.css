@@ -928,6 +928,18 @@ html, body {
       .scroll-btn { display: block; }
     }
 
+        /* ========== TANDA THUMBNAIL AKTIF ========== */
+    .tour-thumbnail.active-thumb img {
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    }
+
+    .tour-thumbnail.active-thumb p {
+    font-weight: bold;
+    background: var(--main-color);
+    color: #fff;
+    }
+
 /* VIRTUAL TOUR END  */
 
 /*

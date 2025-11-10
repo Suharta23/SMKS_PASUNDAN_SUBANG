@@ -1,24 +1,15 @@
 <main>
-    <section class="img-hero-2 bg-body-tertiary" data-aos="fade-up">
-        <div class="hero-2">
-            <div class="container-fluid hero-2-fl">
-                <div class="container d-flex align-items-center justify-content-center h-100 flex-column">
-                    <h1 class="display-4 fw-bold hero-title" data-aos="fade-up" data-aos-delay="100">Apa Kata <span class="teg">Mereka?</span></h1>
-                    <p class="lead text-center" data-aos="fade-up" data-aos-delay="200">Kisah sukses dan kesan positif dari Alumni, Mitra Industri, dan Orang Tua Siswa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
     
-    <div class="container py-3">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="300">
-                <li class="breadcrumb-item"><a href="?page=beranda" class="text-decoration-none">Beranda</a></li>
-                <li class="breadcrumb-item">Hubinmas</li>
-                <li class="breadcrumb-item active" aria-current="page">Testimoni</li>
-            </ol>
-        </nav>
-    </div>
+    <?php
+
+        $judul_hero1="Apa Kata ";
+        $judul_hero2="Mereka?";
+
+        $subjudul_hero="Kisah sukses dan kesan positif dari Alumni, Mitra Industri, dan Orang Tua Siswa.";
+
+    ?>
+
+    <?php include "view/layout/hero.php"; ?>
 
     <section id="pengantar" class="py-5">
         <div class="container">

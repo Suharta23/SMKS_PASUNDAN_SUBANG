@@ -1,25 +1,16 @@
 
 <main>
-    <section class="img-hero-2 bg-body-tertiary" data-aos="fade-up">
-        <div class="hero-2">
-            <div class="container-fluid hero-2-fl">
-                <div class="container d-flex align-items-center justify-content-center h-100 flex-column text-center">
-                    <h1 class="display-4 fw-bold hero-title" data-aos="fade-up" data-aos-delay="100">Detail <span class="teg">Berita</span></h1>
-                    <p class="lead text-center" data-aos="fade-up" data-aos-delay="200">Siswa RPL Raih Juara 1 LKS Tingkat Provinsi Bidang Web Development</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <div class="container py-3">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="300">
-                <li class="breadcrumb-item"><a href="beranda.php" class="text-decoration-none">Beranda</a></li>
-                <li class="breadcrumb-item"><a href="berita.php" class="text-decoration-none">Berita</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Detail</li>
-            </ol>
-        </nav>
-    </div>
+
+    <?php
+
+        $judul_hero1="Detail ";
+        $judul_hero2="Berita";
+
+        $subjudul_hero="Siswa RPL Raih Juara 1 LKS Tingkat Provinsi Bidang Web Development";
+
+    ?>
+
+    <?php include "view/layout/hero.php"; ?>
 
     <section id="detail-berita" class="py-5">
         <div class="container">

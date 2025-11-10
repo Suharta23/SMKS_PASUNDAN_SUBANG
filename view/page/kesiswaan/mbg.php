@@ -1,32 +1,17 @@
 <main>
-    <?php 
-    // *******************************************************************
-    // ** PERBAIKAN ROBUSTNESS: MEMAKSA SET VARIABEL HALAMAN AKTIF **
-    // ** (Hapus baris ini jika variabel sudah diset di file index.php) **
-    $currentPage = 'program_mbg'; 
-    // *******************************************************************
+
+  <?php
+
+        $upper=1;
+
+        $judul_hero1="Program ";
+        $judul_hero2="Makan Bergizi Gratis";
+
+        $subjudul_hero="Inisiatif nutrisi untuk mendukung pertumbuhan siswa menuju Generasi Emas.";
+
     ?>
 
-    <section class="img-hero-2 bg-body-tertiary" data-aos="fade-up">
-        <div class="hero-2">
-            <div class="container-fluid hero-2-fl">
-                <div class="container d-flex align-items-center justify-content-center h-100 flex-column">
-                    <h1 class="display-4 fw-bold hero-title" data-aos="fade-up" data-aos-delay="100">Program <span class="teg">Makan Bergizi Gratis</span></h1>
-                    <p class="lead text-center" data-aos="fade-up" data-aos-delay="200">Inisiatif nutrisi untuk mendukung pertumbuhan siswa menuju Generasi Emas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <div class="container py-3">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="300">
-                <li class="breadcrumb-item"><a href="?page=beranda" class="text-decoration-none">Beranda</a></li>
-                <li class="breadcrumb-item">Kesiswaan</li>
-                <li class="breadcrumb-item active" aria-current="page">Makan Bergizi Gratis</li>
-            </ol>
-        </nav>
-    </div>
+    <?php include "view/layout/hero.php"; ?>
 
     <section id="filosofi" class="py-5">
         <div class="container">

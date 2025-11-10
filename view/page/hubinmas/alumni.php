@@ -1,25 +1,14 @@
 <main>
-    <section class="img-hero-2 bg-body-tertiary" data-aos="fade-up">
-        <div class="hero-2">
-            <div class="container-fluid hero-2-fl">
-                <div class="container d-flex align-items-center justify-content-center h-100 flex-column">
-                    <h1 class="display-4 fw-bold hero-title" data-aos="fade-up" data-aos-delay="100">Penelusuran <span class="teg">Alumni</span></h1>
-                    <p class="lead text-center" data-aos="fade-up" data-aos-delay="200">Menjaga koneksi dan memetakan karir lulusan SMKS Pasundan Subang.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <div class="container py-3">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="300">
-                <li class="breadcrumb-item"><a href="?page=beranda" class="text-decoration-none">Beranda</a></li>
-                <li class="breadcrumb-item">Hubinmas</li>
-                <li class="breadcrumb-item active" aria-current="page">Penelusuran Alumni</li>
-            </ol>
-        </nav>
-    </div>
+<?php
 
+    $judul_hero1="Penelusuran";
+    $judul_hero2="Alumni";
+
+    $subjudul_hero="Menjaga koneksi dan memetakan karir lulusan SMKS Pasundan Subang.";
+
+?>
+   <?php include "view/layout/hero.php"; ?>
+   
     <section id="tracer-study" class="py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
@@ -28,7 +17,7 @@
                     <h2 class="txt-judul fw-bold mb-4">Mekanisme <span class="teg">Tracer Study</span></h2>
                     
                     <p class="lead text-muted txt-justify">
-                        **Penelusuran Alumni** atau **Tracer Study** adalah proses pengumpulan data dan informasi mengenai status karir lulusan kami (bekerja, wirausaha, atau melanjutkan studi) dalam kurun waktu tertentu setelah kelulusan.
+                        <strong>Penelusuran Alumni</strong> atau <strong>Tracer Study </strong> adalah proses pengumpulan data dan informasi mengenai status karir lulusan kami (bekerja, wirausaha, atau melanjutkan studi) dalam kurun waktu tertentu setelah kelulusan.
                     </p>
 
                     <blockquote class="blockquote border-start border-main-color border-4 ps-4 mb-4">
@@ -37,9 +26,9 @@
                     
                     <h4 class="fw-bold txt-main mt-4">Tiga Pilar Status Alumni:</h4>
                     <ul class="list-unstyled mt-3 fs-5">
-                        <li class="mb-2"><i class="bi bi-person-workspace txt-main me-2"></i> **Bekerja:** Penempatan di DUDI mitra (Diserap BKK).</li>
-                        <li class="mb-2"><i class="bi bi-shop txt-main me-2"></i> **Wirausaha:** Alumni yang sukses membangun bisnis sendiri.</li>
-                        <li class="mb-2"><i class="bi bi-mortarboard-fill txt-main me-2"></i> **Melanjutkan Studi:** Alumni yang melanjutkan ke jenjang perguruan tinggi.</li>
+                        <li class="mb-2"><i class="bi bi-person-workspace txt-main me-2"></i> <strong>Bekerja:</strong> Penempatan di DUDI mitra (Diserap BKK).</li>
+                        <li class="mb-2"><i class="bi bi-mortarboard-fill txt-main me-2"></i> <strong>Melanjutkan Studi:</strong> Alumni yang melanjutkan ke jenjang perguruan tinggi.</li>
+                        <li class="mb-2"><i class="bi bi-shop txt-main me-2"></i> <strong>Wirausaha:</strong>Alumni yang sukses membangun bisnis sendiri.</li>
                     </ul>
                 </div>
                 

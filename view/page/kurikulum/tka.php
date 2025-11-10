@@ -1,24 +1,17 @@
 <main>
-    <section class="img-hero-2 bg-body-tertiary" data-aos="fade-up">
-        <div class="hero-2">
-            <div class="container-fluid hero-2-fl">
-                <div class="container d-flex align-items-center justify-content-center h-100 flex-column">
-                    <h1 class="display-4 fw-bold hero-title" data-aos="fade-up" data-aos-delay="100">Tes <span class="teg">Kemampuan Akademik (TKA)</span></h1>
-                    <p class="lead text-center" data-aos="fade-up" data-aos-delay="200">Asesmen diagnostik untuk mengukur potensi dan kesiapan siswa dalam belajar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
     
-    <div class="container py-3">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="300">
-                <li class="breadcrumb-item"><a href="?page=beranda" class="text-decoration-none">Beranda</a></li>
-                <li class="breadcrumb-item">Kurikulum</li>
-                <li class="breadcrumb-item active" aria-current="page">TKA</li>
-            </ol>
-        </nav>
-    </div>
+    <?php
+
+        $upper=1;
+
+        $judul_hero1="Tes ";
+        $judul_hero2="Kemampuan Akademik (TKA)";
+
+        $subjudul_hero="Asesmen diagnostik untuk mengukur potensi dan kesiapan siswa dalam belajar.";
+
+    ?>
+
+    <?php include "view/layout/hero.php"; ?>
 
     <section id="definisi" class="py-5">
         <div class="container">

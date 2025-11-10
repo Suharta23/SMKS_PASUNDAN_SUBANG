@@ -1,24 +1,15 @@
 <main>
-    <section class="img-hero-2 bg-body-tertiary" data-aos="fade-up">
-        <div class="hero-2">
-            <div class="container-fluid hero-2-fl">
-                <div class="container d-flex align-items-center justify-content-center h-100 flex-column">
-                    <h1 class="display-4 fw-bold hero-title" data-aos="fade-up" data-aos-delay="100">Program <span class="teg">Supervisi Pembelajaran</span></h1>
-                    <p class="lead text-center" data-aos="fade-up" data-aos-delay="200">Pengawasan terstruktur untuk peningkatan profesionalisme guru dan mutu pengajaran.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <div class="container py-3">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="300">
-                <li class="breadcrumb-item"><a href="?page=beranda" class="text-decoration-none">Beranda</a></li>
-                <li class="breadcrumb-item">Kurikulum</li>
-                <li class="breadcrumb-item active" aria-current="page">Supervisi</li>
-            </ol>
-        </nav>
-    </div>
+
+    <?php
+
+        $judul_hero1="Program ";
+        $judul_hero2="Supervisi Pembelajaran";
+
+        $subjudul_hero="Pengawasan terstruktur untuk peningkatan profesionalisme guru dan mutu pengajaran.";
+
+    ?>
+
+    <?php include "view/layout/hero.php"; ?>
 
     <section id="definisi" class="py-5">
         <div class="container">

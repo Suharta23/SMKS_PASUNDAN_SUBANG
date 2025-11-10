@@ -1,28 +1,16 @@
 
 <main>
-    <!-- bagian hero -->
-         <section class="img-hero-2 bg-body-tertiary" data-aos="fade-up">
-            <div class="hero-2">
-                <div class="container-fluid hero-2-fl">
-                    <div class="container d-flex align-items-center justify-content-center h-100 flex-column">
-                        <h1 class="display-4 fw-bold hero-title" data-aos="fade-up" data-aos-delay="100"><span class="teg">Sejarah</span> Singkat Kami</h1>
-                        <p class="lead text-center" data-aos="fade-up" data-aos-delay="200">Perjalanan SMKS Pasundan Subang dari Masa ke Masa</p>
-                    </div>
-                 </div>
-            </div>
-        </section>
-        <!-- bagian hero end  -->
-        <!-- bagian bradcramp  -->
-        <div class="container py-3">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="300">
-                    <li class="breadcrumb-item"><a href="beranda.php" class="text-decoration-none">Beranda</a></li>
-                    <li class="breadcrumb-item">Tentang Kami</li>
-                    <li class="breadcrumb-item active" aria-current="page">Sejarah</li>
-                </ol>
-            </nav>
-        </div>
-        <!-- bagian bradcramp end  -->
+
+    <?php
+
+        $judul_hero1="Sejarah ";
+        $judul_hero2="Singkat Kami";
+
+        $subjudul_hero="Perjalanan SMKS Pasundan Subang dari Masa ke Masa";
+
+    ?>
+
+    <?php include "view/layout/hero.php"; ?>
 
         <!-- bagian 1 -->
         <section class="py-5">

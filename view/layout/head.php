@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>SMKS Pasundan Subang | Sekolah Kejuruan Terbaik Siap Kerja & Berkarakter</title>
+    <title><?= $title ?></title>
    <!-- Meta Utama -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +36,7 @@
     <meta name="twitter:image" content="https://www.smks-pasundan-subang.sch.id/assets/img/logo/logo.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/logo.png">
+    <link rel="icon" type="image/x-icon" href="<?= $icon ?>">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.smks-pasundan-subang.sch.id/">

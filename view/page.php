@@ -14,9 +14,24 @@
 
             if (file_exists($tpl)) {
                 if($page!="tour"){
-                    include "view/layout/navbar.php";
-                    include $tpl;
-                    include "view/layout/footer.php";
+
+                     include "controller/page.php";
+
+                    if ($page=="beranda") {
+
+                        include "view/layout/navbar.php";
+                        include $tpl;
+                        include "view/layout/footer.php";
+
+                    }else{
+
+                        include "view/layout/navbar.php";
+                        include "view/layout/hero.php";
+                        include $tpl;
+                        include "view/layout/footer.php";
+                        
+                    }
+                    
                 }else{
                      include $tpl;
                 }

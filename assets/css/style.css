@@ -68,6 +68,18 @@ html, body {
     color: #fff;
 }
 
+.bg-light{
+    background-color: #F8F9FA;
+    color: #555555;
+}
+
+.bg-white{
+    background-color: #F8F9FA;
+    color: #FFFFFF;
+}
+
+bg
+
 .btn {
     padding: 10px 20px;
     border-radius: 10px;

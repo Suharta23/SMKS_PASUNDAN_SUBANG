@@ -2,7 +2,6 @@
 
      <?php
 
-
         include "hero.php";
 
         include "sambutan.php";

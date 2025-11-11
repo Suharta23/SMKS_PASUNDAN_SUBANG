@@ -1,3 +1,4 @@
+
  <!-- SECTION PROFIL -->
     <section id="profil" class="py-5 bg-light">
         <div class="container py-4">
@@ -8,20 +9,26 @@
                 </div>
 
                 <div class="col-lg-6 ps-5" data-aos="fade-left">
-                    <h6 class="ttg-judul">Tentang Kami</h6>
-                    <h2 class="txt-judul"><span class="teg">Sejarah Singkat</span> & Identitas</h2>
-                    <p class="lead text-muted txt-justify">
-                        Didirikan pada 2000, SMKS Pasundan Subang telah mendedikasikan diri untuk menjadi pusat pendidikan vokasi terdepan di Kabupaten Subang.
+                    <h6 class="ttg-judul"><?= $ttg_j_ttg_kami ?></h6>
+                    <h2 class="txt-judul"><span class="teg"><?= $txt_j_ttg_kami1 ?></span> <?= $txt_j_ttg_kami2 ?></h2>
+                   <p class="lead text-muted txt-justify">
+                        <?= $profil["deskripsi"]["lead"] ?>
                     </p>
                     <p class="txt-justify">
-                        Kami berlokasi strategis di Subang Kota, menyediakan lingkungan belajar yang aman, modern, dan didukung oleh fasilitas lengkap untuk menunjang 6 kompetensi keahlian unggulan kami.
+                        <?= $profil["deskripsi"]["paragraf"] ?>
                     </p>
+
                     <ul class="list-unstyled mt-3 fs-5">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill txt-main me-2"></i> Akreditasi A (Unggul)</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill txt-main me-2"></i> Tenaga Pengajar Profesional</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill txt-main me-2"></i> Fasilitas Workshop Standar Industri</li>
+                        <?php foreach ($profil["keunggulan"] as $item): ?>
+                            <li class="mb-2">
+                                <i class="bi bi-check-circle-fill txt-main me-2"></i> <?= $item ?>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
-                    <a href="/profil/sejarah" class="btn btn-main btn-lg px-5 py-3 mt-2">Pelajari Sejarah Kami</a>
+
+                    <a href="<?= $profil["link"]["url"] ?>" class="btn btn-main btn-lg px-5 py-3 mt-2">
+                        <?= $profil["link"]["text"] ?>
+                    </a>
                 </div>
             </div>
         </div>

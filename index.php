@@ -5,4 +5,3 @@ include "core/data_main.php";
 
 include "view/page.php";
 
-//tes

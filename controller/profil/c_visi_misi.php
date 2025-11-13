@@ -22,26 +22,36 @@
     ];
 
 
-    $nilai_utama = [
+    // card layout
+    komponen("card_layout");
+
+    $judul_nilai="Nilai-Nilai Utama Kami";
+    $subjudul='Prinsip yang memandu setiap langkah kami dalam komunitas sekolah.';
+    $bg='bg-white';
+
+    // Data custom
+    $isi = [
         [
-            "icon" => "bi bi-shield-check",
-            "title" => "Integritas",
-            "desc" => "Menjunjung tinggi kejujuran, etika, dan tanggung jawab dalam setiap tindakan.",
-            "delay" => 200
+            'icon' => 'bi-shield-check',
+            'warna' => 'bg-main',
+            'judul' => 'Integritas',
+            'teks' => 'Menjunjung tinggi kejujuran, etika, dan tanggung jawab dalam setiap tindakan.'
         ],
         [
-            "icon" => "bi bi-lightbulb-fill",
-            "title" => "Inovatif",
-            "desc" => "Selalu terbuka terhadap ide-ide baru, kreatif, dan mencari solusi terbaik dalam pendidikan.",
-            "delay" => 300
+            'icon' => 'bi-lightbulb-fill',
+            'warna' => 'bg-main',
+            'judul' => 'Inovatif',
+            'teks' => 'Selalu terbuka terhadap ide-ide baru, kreatif, dan mencari solusi terbaik dalam pendidikan.'
         ],
         [
-            "icon" => "bi bi-people-fill",
-            "title" => "Kolaboratif",
-            "desc" => "Mendorong kerja sama yang solid antar siswa, guru, orang tua, dan masyarakat.",
-            "delay" => 400
+            'icon' => 'bi-people-fill',
+            'warna' => 'bg-main',
+            'judul' => 'Kolaboratif',
+            'teks' => 'Mendorong kerja sama yang solid antar siswa, guru, orang tua, dan masyarakat.'
         ]
     ];
+
+// card layput end
 
 
     komponen("cta");

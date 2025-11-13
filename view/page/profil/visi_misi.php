@@ -54,27 +54,17 @@
             </div>
         </div>
     </section>
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="txt-judul fw-bold" data-aos="fade-up">Nilai-Nilai <span class="teg">Utama</span> Kami</h2>
-                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">Prinsip yang memandu setiap langkah kami dalam komunitas sekolah.</p>
-            </div>
-            <div class="row g-4 text-center justify-content-center">
-                 <?php foreach ($nilai_utama as $nilai): ?>
-                    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="<?= $nilai['delay'] ?>">
-                        <div class="card h-100 border-0 shadow-sm p-3">
-                            <div class="card-body p-4">
-                                <i class="<?= $nilai['icon'] ?> fs-1 txt-main mb-3"></i>
-                                <h4 class="fw-bold"><?= $nilai['title'] ?></h4>
-                                <p class="text-muted"><?= $nilai['desc'] ?></p>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
+
+    <?php 
+
+        tampilkanTahapan(
+            $judul_nilai,
+            $subjudul,
+            $bg,
+            $isi
+        );
+
+     ?>
    
 
     <?php 

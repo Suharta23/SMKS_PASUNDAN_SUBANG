@@ -57,6 +57,10 @@ html, body {
     color: var(--main-color);
 }
 
+.txt-second {
+    color: var(--second-color);
+}
+
 /* 3. BACKGROUNDS & BUTTONS */
 .bg-main {
     background-color: var(--main-color) !important;

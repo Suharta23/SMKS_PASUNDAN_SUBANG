@@ -60,7 +60,7 @@
         4 // jumlah kolom per baris
     );
 
-    echo tbl('/daftar', 'Daftar Sekarang!', 'bg-light',);
+    tbl('/daftar', 'Daftar PPDB Sekarang!', 'bg-light', 500);
 
   ?>
 

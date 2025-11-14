@@ -9,7 +9,6 @@
         $subjudul_hero="Meningkatkan fokus belajar melalui asupan gizi yang cukup dan kebersamaan.";
 
     ?>
-
     <?php include "view/layout/hero.php"; ?>
 
     <section id="filosofi" class="py-5">
@@ -137,3 +136,4 @@
         </div>
     </section>
     </main>
+

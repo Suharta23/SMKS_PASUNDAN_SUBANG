@@ -1,15 +1,3 @@
-<main>
-
-    <?php
-
-        $judul_hero1="Kegiatan ";
-        $judul_hero2="Kokurikuler";
-
-        $subjudul_hero="Aktivitas pembelajaran terstruktur di luar jam pelajaran untuk pendalaman materi.";
-
-    ?>
-
-    <?php include "view/layout/hero.php"; ?>
 
     <section id="definisi" class="py-5">
         <div class="container">

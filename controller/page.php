@@ -4,6 +4,7 @@
 	function komponen($com){
 		include "komponen/$com.php";
 	}
+	komponen("tag_random");
 
 	if (!isset($page)) {
 

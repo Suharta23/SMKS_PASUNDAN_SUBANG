@@ -1,9 +1,8 @@
 
-
     <?php 
 
         tampilkanTahapan(
-            $judul,
+            $judulcard,
             $subjudul,
             $bg,
             $isi
@@ -11,6 +10,19 @@
 
      ?>
 
+<?php 
+    
+layout1(
+    id: 'visi',
+    judul: 'Visi Sekolah',
+    teks_awal: 'Teks awal...',
+    kutipan: '',
+    gambar: 'img/visi.png',
+    komponen_tambahan: $tabel
+);
+
+
+ ?>
     <section id="struktur" class="py-5 <?= $judul_struktur['bg'] ?>">
     <div class="container">
         <div class="row g-5 align-items-center">
@@ -53,9 +65,9 @@
  <?php 
 
     card_2(
-        "Lihat Kurikulum <span class='teg'>Per Kompetensi Keahlian</span>",
-        "Jelajahi detail mata pelajaran, prospek karir, dan fasilitas yang disinkronkan dengan standar industri modern.",
-        "bg-light",
+        $jurusan_judul,
+        $subjurusan_judul,
+        $jurusan_bg,
         $jurusan_list,
         4 // jumlah kolom per baris
     );

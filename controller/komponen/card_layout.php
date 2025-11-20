@@ -17,10 +17,10 @@ function tampilkanTahapan($judul, $deskripsi, $bg = 'bg-light', $tahapan = [])
         <div class="container">
             <div class="text-center col-lg-8 mx-auto mb-5">
                 <h2 class="txt-judul fw-bold" data-aos="fade-up">
-                    <?= htmlspecialchars($judul) ?>
+                    <?= $judul ?>
                 </h2>
                 <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
-                    <?= htmlspecialchars($deskripsi) ?>
+                    <?= $deskripsi ?>
                 </p>
             </div>
 
@@ -32,9 +32,9 @@ function tampilkanTahapan($judul, $deskripsi, $bg = 'bg-light', $tahapan = [])
                                 <i class="bi <?= $t['icon'] ?> fs-3 text-white"></i>
                             </div>
                             <h4 class="fw-bold <?= $t['warna'] == 'bg-main' ? 'txt-main' : 'txt-second' ?>">
-                                <?= htmlspecialchars($t['judul']) ?>
+                                <?= $t['judul'] ?>
                             </h4>
-                            <p class="text-muted small"><?= htmlspecialchars($t['teks']) ?></p>
+                            <p class="text-muted small"><?= $t['teks'] ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>

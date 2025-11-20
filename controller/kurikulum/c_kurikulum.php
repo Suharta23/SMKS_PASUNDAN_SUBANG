@@ -4,37 +4,43 @@
     $judul_hero2="Sekolah";
     $subjudul_hero="Pondasi pendidikan vokasi yang adaptif dan berkarakter.";
 
-
 	komponen("card_layout");
 
-    $judul="Pilar Filosofi Kurikulum Kami";
-    $subjudul='Kami menerapkan Kurikulum Merdeka yang diperkaya dengan praktik industri dan pembentukan karakter.';
-    $bg='bg-white';
+    $kurikulum1=query("SELECT * FROM layout_card WHERE id_layout=1")[0];
+    $kurikulum1_isi=query("SELECT * FROM isi_card WHERE card=1");
+
+    $judulcard= tag($kurikulum1['judul_card1']);
+    $subjudul=$kurikulum1['subjudul_card1'];
+    $bg=$kurikulum1['bg_card'];
 
     // Data custom
-    $isi = [
-        [
-            'icon' => 'bi-person-workspace',
-            'warna' => 'bg-main',
-            'judul' => 'Kompetensi Industri',
-            'teks' => 'Kurikulum berbasis unit kompetensi DUDIKA dan sertifikasi keahlian profesional.'
-        ],
-        [
-            'icon' => 'bi-clipboard-check',
-            'warna' => 'bg-main',
-            'judul' => 'Pembelajaran Berbasis Projek',
-            'teks' => 'Mendorong kreativitas dan pemecahan masalah melalui *Project Based Learning* (PBL) nyata.'
-        ],
-        [
-            'icon' => 'bi-patch-check',
-            'warna' => 'bg-main',
-            'judul' => 'Penguatan Profil Pelajar',
-            'teks' => 'Fokus pada pembentukan karakter, etika, dan soft skill melalui program P5 (Pelajar Pancasila).'
-        ]
-    ];
-
+    $isi = [];
+    foreach ($kurikulum1_isi as $row) {
+        $isi[] = [
+            'icon'  => $row['icon'],
+            'warna' => $row['warna'],
+            'judul' => $row['judul'],
+            'teks'  => $row['desk'] 
+        ];
+    }
 
     //struktur kurikulum
+    komponen("tabel");
+    $thead = ["No", "Nama", "Keterangan"];
+    $rows = [
+        [1, "Item Satu", "Contoh keterangan"],
+        [2, "Item Dua", "Contoh lainnya"]
+    ];
+    $tabel = komponenTabel("", $thead, $rows);
+
+    komponen("layout1");
+
+    $judul_struktur = [
+        "judul" => "Rincian <span class='teg'>Struktur</span> Kurikulum",
+        "deskripsi" => "Program pembelajaran dibagi berdasarkan alokasi waktu dan fokus pengembangan siswa:",
+        "bg" => "bg-white", // bisa diubah: bg-white, bg-light, atau bg-body
+        "gambar" => "assets/img/konten/struktur_kurikulum.png"
+    ];
 
     $struktur_kurikulum = [
     [
@@ -59,56 +65,30 @@
     ]
 ];
 
-$judul_struktur = [
-    "judul" => "Rincian <span class='teg'>Struktur</span> Kurikulum",
-    "deskripsi" => "Program pembelajaran dibagi berdasarkan alokasi waktu dan fokus pengembangan siswa:",
-    "bg" => "bg-white", // bisa diubah: bg-white, bg-light, atau bg-body
-    "gambar" => "assets/img/konten/struktur_kurikulum.png"
-];
 
 
 // bagian jurusan
 
  komponen("card_2");
 
-$jurusan_list = [
-    [
-        "nama" => "RPL",
-        "deskripsi" => "Pengembangan Web/Mobile & Database.",
-        "icon" => "bi-code-slash",
-        "link" => "/jurusan/rpl"
-    ],
-    [
-        "nama" => "TKJ",
-        "deskripsi" => "Jaringan, Keamanan Siber & Cloud.",
-        "icon" => "bi-diagram-3-fill",
-        "link" => "/jurusan/tkj"
-    ],
-    [
-        "nama" => "TKR",
-        "deskripsi" => "Perawatan Mesin Injeksi & Diagnosis.",
-        "icon" => "bi-gear-fill",
-        "link" => "/jurusan/tkr"
-    ],
-    [
-        "nama" => "AKL",
-        "deskripsi" => "Akuntansi Digital & Perpajakan.",
-        "icon" => "bi-calculator-fill",
-        "link" => "/jurusan/akuntansi"
-    ],
-    [
-        "nama" => "OTKP",
-        "deskripsi" => "Administrasi & Kearsipan Digital.",
-        "icon" => "bi-briefcase-fill",
-        "link" => "/jurusan/perkantoran"
-    ],
-    [
-        "nama" => "Perhotelan",
-        "deskripsi" => "Front Office, Housekeeping & F&B.",
-        "icon" => "bi-house-door-fill",
-        "link" => "/jurusan/perhotelan"
-    ],
-];
+$jurusan_card=query("SELECT * FROM layout_card WHERE id_layout=2")[0];
+$jurusan_isi_data=query("SELECT * FROM isi_card2 WHERE card=2");
+
+        $jurusan_judul=tag($jurusan_card['judul_card1']);
+        $subjurusan_judul=$jurusan_card['subjudul_card1'];
+        $jurusan_bg=$jurusan_card['bg_card1'];
+
+$jurusan_list = [];
+    foreach ($jurusan_isi_data as $row) {
+        $jurusan_list[] = [
+            "icon" => $row["icon"],
+            "warna" => $row["warna"],
+            "judul" => $row["judul"],
+            "deskripsi" => $row["desk"],
+            "link" => $row["link"],
+            "btn" => $row["tombol"]
+        ];
+    }
 
 komponen("tbl1");
 

@@ -1,0 +1,12 @@
+[33m78a19fe[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Uppdate terbaru pertama di tanggal 14 november 2025
+[33m99ecf1a[m Menambahkan beberapa komponen masih dalah proses
+[33mf02ba90[m hilangkan tes
+[33m2459f9e[m Membuat website menjadi lebih dinamis
+[33m3cab356[m Di halaman beranda beberapa sudah di jadikan simulasi data untuk perkiraan database, seperti jurusan sudah berbentuk array dan lainnya
+[33mc264284[m Membuat Hero di halaman selain branda menjadi statis dan memperbaiki bradcramp agar otomatis
+[33m0f70661[m Update beberapa hero sudah di update dengan menggunakan variabel.
+[33m8e90d65[m[33m ([m[1;31morigin/suharta[m[33m)[m Menambahkan fitur 'Active' pada virtual tour
+[33m1c97f49[m Menambahkan Tour ke dalam Web, Serta memperbaiki beberapa bug
+[33m6a760d1[m komentar index
+[33m1bcffe2[m Update layoutign dan perbaikan URL
+[33m2f9f527[m First commit

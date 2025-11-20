@@ -23,13 +23,13 @@ function card_2($judul, $deskripsi, $bg, $data_list, $col = 4)
                     <div class="<?= $col_class ?>" data-aos="zoom-in" data-aos-delay="<?= 100 + ($index * 100) ?>">
                         <div class="card h-100 p-3 shadow-sm border-0 text-center rd-10 bg-white">
                             <div class="py-3">
-                                <i class="bi <?= $item['icon'] ?> fs-1 txt-main"></i>
+                                <i class="bi <?= $item['icon'] ?> fs-1 txt-<?= $item['warna'] ?>"></i>
                             </div>
-                            <h5 class="fw-bold mb-1 txt-main"><?= $item['nama'] ?></h5>
+                            <h5 class="fw-bold mb-1 txt-<?= $item['warna'] ?>"><?= $item['judul'] ?></h5>
                             <p class="small text-dark mb-3"><?= $item['deskripsi'] ?></p>
                             <?php if (!empty($item['link'])): ?>
-                                <a href="<?= $item['link'] ?>" class="btn btn-outline-main btn-sm fw-bold">
-                                    Lihat Detail &rarr;
+                                <a href="<?= $item['link'] ?>" class="btn btn-outline-<?= $item['warna'] ?> btn-sm fw-bold">
+                                    <?= $item['btn'] ?> &rarr;
                                 </a>
                             <?php endif; ?>
                         </div>

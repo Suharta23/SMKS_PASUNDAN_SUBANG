@@ -11,7 +11,7 @@
 
     $judulcard= tag($kurikulum1['judul_card1']);
     $subjudul=$kurikulum1['subjudul_card1'];
-    $bg=$kurikulum1['bg_card'];
+    $bg=$kurikulum1['bg_card1'];
 
     // Data custom
     $isi = [];
@@ -26,47 +26,26 @@
 
     //struktur kurikulum
     komponen("tabel");
-    $thead = ["No", "Nama", "Keterangan"];
+    $thead = ["Komponen", "Fokus", "Alokasi"];
     $rows = [
-        [1, "Item Satu", "Contoh keterangan"],
-        [2, "Item Dua", "Contoh lainnya"]
+        ["Intrakurikuler", "Mata Pelajaran Wajib & Kejuruan", "70% Waktu Belajar"],
+        ["P5", "Soft Skill & Karakter (Profil Pelajar Pancasila)", "20% Waktu Belajar"],
+        ["Ekstrakurikuler", "Minat, Bakat, dan Komunitas Siswa", "Diluar Jam Tatap Muka"],
+        ["Magang (PKL)", "Penerapan Kompetensi di DUDIKA", "Pada Semester Tertentu"]
     ];
+
     $tabel = komponenTabel("", $thead, $rows);
 
     komponen("layout1");
 
-    $judul_struktur = [
-        "judul" => "Rincian <span class='teg'>Struktur</span> Kurikulum",
-        "deskripsi" => "Program pembelajaran dibagi berdasarkan alokasi waktu dan fokus pengembangan siswa:",
-        "bg" => "bg-white", // bisa diubah: bg-white, bg-light, atau bg-body
-        "gambar" => "assets/img/konten/struktur_kurikulum.png"
-    ];
-
-    $struktur_kurikulum = [
-    [
-        "komponen" => "Intrakurikuler",
-        "fokus" => "Mata Pelajaran Wajib & Kejuruan",
-        "alokasi" => "~70% Waktu Belajar"
-    ],
-    [
-        "komponen" => "P5",
-        "fokus" => "Soft Skill & Karakter (Profil Pelajar Pancasila)",
-        "alokasi" => "~20% Waktu Belajar"
-    ],
-    [
-        "komponen" => "Ekstrakurikuler",
-        "fokus" => "Minat, Bakat, dan Komunitas Siswa",
-        "alokasi" => "Diluar Jam Tatap Muka"
-    ],
-    [
-        "komponen" => "Magang (PKL)",
-        "fokus" => "Penerapan Kompetensi di DUDIKA",
-        "alokasi" => "Pada Semester Tertentu"
-    ]
-];
-
-
-
+    $id= 'struktur_kurikulum';
+    $judul= tag("Rincian Struktur Kurikulum");
+    $teks_awal= 'Program pembelajaran dibagi berdasarkan alokasi waktu dan fokus pengembangan siswa:';
+    $kutipan= '';
+    $gambar= 'img/visi.png';
+    $alt= 'Menuju Senja';
+    $reverse=false;
+    $tabel;
 // bagian jurusan
 
  komponen("card_2");
